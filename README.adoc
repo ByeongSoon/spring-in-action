@@ -1,0 +1,52 @@
+spring in action
+================
+
+:icons: font
+:Author: Byeongsoon Jang
+:Email: byeongsoon@wisoft.io
+:Date: 2018.08.06
+:Revision: 1.0
+:imagesdir: ./image
+
+Spring in Action
+(저자 : 크레이그 월즈) 학습 저장소
+
+Byeongsoon Jang<byeongsoon@wisoft.io>
+
+|===
+|===
+
+== 작성규칙
+
+** 'Spring in Action'에서 학습한 예제 코드를 등록한다.
+** 추가적으로 설명이 필요한 부분이나 중요한 내용은
+link:https://github.com/ByeongSoon/TIL/tree/master/Java[여기]
+에 작성한다.
+** web back-end 개발자가 되기위해 학습한다.
+
+|===
+|===
+
+== 목차
+
+. 스프링 속으로
+. 빈 와이어링(묶기)
+. 고급 와이어링
+. 애스펙트 지향 스프링
+. 스프링 웹 애플리케이션 만들기
+. 웹 뷰 렌더링
+. 고급 스프링 MVC
+. 스프링 웹 플로로 작업하기
+. 웹 애플리케이션 보안
+. 스프링과 JDBC를 사용하여 데이터베이스 사용하기
+. 객체관계형 매핑을 통한 데이터 퍼시스팅
+. NoSQL 데이터베이스 사용하기
+. 데이터 캐싱하기
+. 시큐리티 메소드
+. 원격 서비스 사용하기
+. 스프링 MVC로 REST API 사용하기
+. 스프링 메시징
+. WebSocket과 STOMP를 사용하여 메시징하기
+. 스프링을 사용하여 이메일 전송하기
+. JMX를 이용한 스프링 빈
+. 스프링 부트를 사용한 스프링 개발 간소화
