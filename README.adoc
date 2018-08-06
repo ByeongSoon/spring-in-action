@@ -29,7 +29,7 @@ link:https://github.com/ByeongSoon/TIL/tree/master/Java[여기]
 
 == 목차
 
-. 스프링 속으로
+. link:https://github.com/ByeongSoon/spring-in-action/blob/master/01-into-spring/01-into-spring.adoc[스프링 속으로]
 . 빈 와이어링(묶기)
 . 고급 와이어링
 . 애스펙트 지향 스프링
