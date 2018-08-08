@@ -1,10 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--XML이 컴포넌트 스캐닝을 가능케 하는 옵션-->
     <!--<context:component-scan base-package="soundsystem" />-->
+    <!---->
+    <!--<bean id="compactDisc" class="soundsystem.SgtPeppers" />-->
+    <!---->
+    <!--<bean id="cdPlayer" class="soundsystem.CDPlayer">-->
+    <!--<property name="cd" ref="compactDisc" />-->
+    <!--</bean>-->
+    <!---->
+    <!--<bean id="cdPlayer" class="soundsystem.CDPlayer" c:cd-ref="compactDisc" />    -->
+
+    <!--<bean id="cdPlayer" class="soundsystem.CDPlayer" c:_0-ref="compactDisc"/>-->
+
+    <!--<bean id="compactDisc" class="soundsystem.BlankDisc" >-->
+    <!--<constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />-->
+    <!--<constructor-arg value="The Beatles" />-->
+    <!--</bean>-->
+
+    <!--<bean id="compactDisc" class="soundsystem.BlankDisc" -->
+    <!--c:title="Sgt. Pepper's Lonely Hearts Club Band" -->
+    <!--c:artist="The Beatles" />-->
+
+    <!--<bean id="compactDisc" class="soundsystem.BlankDisc"-->
+    <!--c:_0="Sgt. Pepper's Lonely Hearts Club Band"-->
+    <!--c:_1="The Beatles" />-->
+
+    <bean id="compactDisc" class="soundsystem.BlankDisc">
+        <constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band"/>
+        <constructor-arg value="The Beatles"/>
+        <constructor-arg>
+            <list>
+                <value>1. song</value>
+                <value>2. song</value>
+                <value>3. song</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="sgtPeppers" class="soundsystem.SgtPeppers"/>
+
+    <bean id="whiteAlbum" class="soundsystem.WhiteAlbum"/>
+
+    <bean id="hardDaysNight" class="soundsystem.HardDaysNight"/>
+
+    <bean id="revolver" class="soundsystem.Revolver"/>
+
+    <bean id="beatlesDiscography" class="soundsystem.Discography">
+        <constructor-arg value="The Beatles"/>
+        <constructor-arg>
+            <list>
+                <ref bean="sgtPeppers"/>
+                <ref bean="hardDaysNight"/>
+                <ref bean="whiteAlbum"/>
+                <ref bean="revolver"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!--<bean id="cdPlayer" class="soundsystem.CDPlayer">-->
+        <!--<property name="cd" ref="compactDisc" />-->
+    <!--</bean>-->
+
+    <bean id="cdPlayer" class="soundsystem.CDPlayer" p:cd-ref="compactDisc"/>
+
+    <!--<import resource="application-context.xml"/>-->
+
+    <!--<bean class="soundsystem.CDPlayerConfig"/>-->
 
 </beans>
