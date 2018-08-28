@@ -223,7 +223,18 @@ AOP는 보통 '제 3자의 관점으로 바라보자'
 ===== 빈의 생명주기(Bean Life Cycle)
 
 ====
-about life cycle
+
+1. 빈 객체 생성
+2. BeanNameAware.setBeanName()
+3. BeanFactoryAware.setBeanFactory()
+4. BeanPostProcessor의 초기화 전처리
+5. 커스텀 init - method
+6. InitializingBean.afterPropertiesSet()
+7. BeanPostProcessor의 초기화 후처리
+8. 빈 객체 사용
+9. DisposableBean.destroy()
+10. 커스텀 destroy - method
+
 ====
 
 * 스프링 컨테이너는 여러 가지가 있다.
@@ -232,8 +243,11 @@ about life cycle
 *** 애플리케이션 컨텍스트 : 빈 팩토리를 확장해 프로퍼티 파일에 텍스트 메시지를 읽고 해당 이벤트 리스너에 대한 애플리케이션 이벤트 발행 같은 애플리케이션 프레임워크 서비스를 제공하는 컨테이너다.
 
 ====
-*빈 팩토리와 애플리케이션 컨텍스트 비교*
+*link:http://flyburi.com/277[빈 팩토리와 애플리케이션 컨텍스트 비교]*
 
+* 빈 팩토리 : 팩토리 디자인 패턴을 구현한 것, 빈 팩토리는 빈을 생성하고 분배하는 책임을 지는 클래스
+
+* 애플리케이션 컨텍스트 : 빈 팩토리와 유사한 기능을 제공하지만 좀 더 많은 기능을 제공하는 ApplicationContext
 
 ====
 
